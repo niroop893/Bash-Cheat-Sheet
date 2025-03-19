@@ -9,6 +9,82 @@
 
 touch foo.sh
 chmod +x !$   # !$ is the last argument of the last command i.e. foo.sh
+#!/bin/bash
+echo "Today is " `date`
+
+echo -e "\nenter the path to directory"
+read the_path
+
+echo -e "\n you path has the following files and folders: "
+ls $the_path
+chmod u+x run_all.sh
+
+while read line
+do
+  echo $line
+done < input.txt
+echo "Hello, $1!"
+#!/bin/bash
+echo "Hello, $1!"
+
+if [[ condition ]];
+then
+    statement
+elif [[ condition ]]; then
+    statement 
+else
+    do this by default
+fi
+
+if [ $a -gt 60 -a $b -lt 100 ]
+
+#!/bin/bash
+
+echo "Please enter a number: "
+read num
+
+if [ $num -gt 0 ]; then
+  echo "$num is positive"
+elif [ $num -lt 0 ]; then
+  echo "$num is negative"
+else
+  echo "$num is zero"
+fi
+
+#!/bin/bash
+i=1
+while [[ $i -le 10 ]] ; do
+   echo "$i"
+  (( i += 1 ))
+done
+
+#!/bin/bash
+
+for i in {1..5}
+do
+    echo $i
+done
+
+fruit="apple"
+
+case $fruit in
+    "apple")
+        echo "This is a red fruit."
+        ;;
+    "banana")
+        echo "This is a yellow fruit."
+        ;;
+    "orange")
+        echo "This is an orange fruit."
+        ;;
+    *)
+        echo "Unknown fruit."
+        ;;
+esac
+
+# Cron job example
+* * * * * sh /path/to/script.sh
+
 ```
 
 ## Navigating Directories
